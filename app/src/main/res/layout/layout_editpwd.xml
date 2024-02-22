@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#00000000"
+        app:navigationIcon="@mipmap/icon_back"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="修改密码"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_18" />
+    </androidx.appcompat.widget.Toolbar>
+    <EditText
+        android:id="@+id/ed_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:padding="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/reg_edit"
+        android:hint="请输入原始密码"
+        android:textSize="20dp"
+        android:singleLine="true" />
+    <EditText
+        android:id="@+id/ed_newpwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:padding="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/reg_edit"
+        android:hint="请输入新密码"
+        android:textSize="20dp"
+        android:singleLine="true" />
+    <EditText
+        android:id="@+id/ed_again_newpwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:padding="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/reg_edit"
+        android:hint="请再次输入新密码"
+        android:textSize="20dp"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:padding="15dp"
+        android:layout_margin="15dp"
+        android:textColor="@color/white"
+        android:background="@drawable/reg_btn"
+        android:text="保    存"
+        android:textSize="20dp" />
+
+
+</LinearLayout>

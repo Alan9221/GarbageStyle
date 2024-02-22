@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="edu.hniu.garbagestyle">
+
+    <uses-permission android:name="android.permission.INTERNET"/><!--网络-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/><!--允许程序访问有关GSM网络信息-->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/><!--录制音频-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/><!--文件读写-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/><!--相机-->
+
+    <application
+        android:allowBackup="true"
+
+        android:name=".other.TrashApplication"
+        android:requestLegacyExternalStorage="true"
+        android:networkSecurityConfig="@xml/network_config"
+        android:icon="@mipmap/logo"
+        android:label="垃圾分类"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="31">
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="edu.hniu.garbagestyle.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".activity.MainActivity"
+            android:exported="true">
+
+        </activity>
+
+        <activity android:name=".activity.HistoryActivity"  android:exported="true"/>
+        <activity android:name=".activity.NewsDetailsActivity"  android:exported="true"/>
+        <activity android:name=".activity.VoiceInputActivity"  android:exported="true"/>
+        <activity android:name=".activity.TextInputActivity"  android:exported="true"/>
+        <activity android:name=".activity.ImageInputActivity"  android:exported="true"/>
+
+        <activity android:name=".activity.SplashActivity"
+            android:theme="@style/SplashTheme"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.MyselfActivity" android:exported="true"/>
+        <activity android:name=".activity.GuanActivity" android:exported="true"/>
+        <activity android:name=".activity.EditPwdActivity" android:exported="true"/>
+        <activity android:name=".activity.LoginActivity" android:exported="true"/>
+        <activity android:name=".activity.RegActivity" android:exported="true"/>
+
+
+    </application>
+
+
+</manifest>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#00000000"
+
+        app:navigationIcon="@mipmap/icon_back">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="关于我们"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_18" />
+
+    </androidx.appcompat.widget.Toolbar>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp">
+        
+        <TextView
+            android:id="@+id/a"
+            android:layout_width="@dimen/dp_265"
+            android:textColor="#145FF4"
+            android:layout_height="wrap_content"
+            android:text=" 发送无聊问题不会回复  意见建议可以发送到邮箱"
+            android:textSize="@dimen/sp_24"
+            android:layout_centerInParent="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#145FF4"
+            android:textSize="@dimen/sp_24"
+            android:text="wangyi@qq.com"
+            android:layout_below="@+id/a"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+</LinearLayout>

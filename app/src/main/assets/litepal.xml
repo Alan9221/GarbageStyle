@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <!--当你的数据库已经创建之后，如果要使新增的表生效，
+    则需要数据库的版本进行升级，比如之前是1，现在我新增了一个表，那么改成2，这样拟新增的表才会生效。或者你不升级，还是1，你只要把原来的APP卸载重装就可以。-->
+    <!--数据库名称-->
+    <dbname value="GarbageStyle"/>
+    <!--数据库版本-->
+    <version value="2"/>
+    <!--映射模型-->
+    <list>
+        <!--新闻表-->
+        <mapping class="edu.hniu.garbagestyle.model.News"/>
+        <!--历史记录表-->
+        <mapping class="edu.hniu.garbagestyle.model.History"/>
+    </list>
+</litepal>
